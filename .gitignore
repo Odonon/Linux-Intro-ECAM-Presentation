@@ -147,3 +147,15 @@ Our_Presentation_Videos/
 .nav
 .aux
 .out
+
+*.aux
+
+*.nav
+
+*.out
+
+*.snm
+
+*.gz
+
+*.toc
