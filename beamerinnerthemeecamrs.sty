@@ -1,0 +1,57 @@
+\mode<presentation>
+
+\definecolor{bleuecam}{HTML}{2C2C75} % bleu ECAM
+\newcommand\newlogo[2]{\includegraphics[#2]{#1}}
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  \fill[color=bleuecam] (0,\the\paperheight-0.4cm) rectangle (\the\paperwidth,\the\paperheight);
+  \ifnum\thepage>1\relax%
+   \fill[color=bleuecam] (0,0.1) rectangle(\the\paperwidth,0.4cm);
+   \fi
+  \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{ecamrs}[1][]
+{
+\begin{textblock*}{\linewidth}(0cm,0.5cm)
+	\begin{tikzpicture}
+	\useasboundingbox[fill=white] (0,0) rectangle(\linewidth,2cm);
+	\node at (0.5\paperwidth,1) {\newlogo{ECAM-LaSalle.png}{height=3cm}};
+	\end{tikzpicture}
+\end{textblock*}
+
+
+\begin{textblock*}{10cm}(1.5cm,3cm)
+    \begin{beamercolorbox}[center,rounded=true]{title page header}
+      \usebeamerfont{title}\inserttitle%
+    \end{beamercolorbox}%
+	\vskip0.3cm%
+    \begin{beamercolorbox}[center,rounded=true]{subtitle}
+		\usebeamerfont{author}\insertsubtitle%
+	\end{beamercolorbox}%
+    \vskip1cm%
+    \begin{beamercolorbox}[center]{author}
+      \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+     \vskip0.2cm%
+    \begin{beamercolorbox}[center]{date}
+      \usebeamerfont{author}\insertdate%
+    \end{beamercolorbox}
+\end{textblock*}
+
+%\begin{textblock*}{10cm}(1cm,7.5cm)
+%    \begin{tikzpicture}
+%    \useasboundingbox[fill=white] (0,0) rectangle(11cm,2cm);
+%    \node at (0.45\paperwidth,1) {\includegraphics[scale=0.7]{logo_texelis.jpg}};
+%     \node at (0.1\paperwidth,1.5) {\includegraphics[scale=0.7]{logo_reel.jpg}};
+%     \node at (0.75\paperwidth,1.2) {\includegraphics[scale=0.5]{logo_arquus.jpg}};
+%    \end{tikzpicture}
+%\end{textblock*}
+}
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+\mode
+<all>

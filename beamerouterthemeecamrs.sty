@@ -1,0 +1,47 @@
+\mode<presentation>
+
+\definecolor{bleuecam}{HTML}{2C2C75} % bleu ECAM
+
+% Frame title
+\defbeamertemplate*{frametitle}{ecamrs}[1][]
+{
+\vskip1.2cm%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.7cm]{frametitle} 
+  \begin{tikzpicture}
+  \node at (1.5,0) {\newlogo{ECAM-LaSalle}{height=1.5cm}};
+%  \node at (4.1,1.8) {\includegraphics[width=2cm,height=1cm]{logo_lamcos.jpg}};
+%  \node at (6.7,1.8){\includegraphics[width=3cm,height=1cm]{logo_cirtrans.png}};
+  \node[anchor=east, bleuecam,font=\large,align=flush right,text width=6cm] at (\the\paperwidth-0.1cm,0){\textbf{\insertframetitle}};
+  \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+%Frame footline
+\defbeamertemplate*{footline}{ecamrs}[1][]
+{
+\insertnavigation{\paperwidth}
+\vspace{10pt}
+\hfill
+\vspace*{0.15cm}
+\insertsection
+\hfill
+\insertframenumber
+\null{\hspace{0.2cm}}
+\hfill
+}
+
+%Frame headline
+\defbeamertemplate*{headline}{ecamrs}[1][]
+{
+  \ifnum\thepage>1\relax%
+\vspace*{0.1cm}
+\null{\hspace{0.1cm}}
+\insertdate
+\hfill
+\inserttitle
+\null{\hspace{0.1cm}}
+   \fi
+}
+
+\setbeamercolor*{item}{fg=orange}
+\mode<all>
