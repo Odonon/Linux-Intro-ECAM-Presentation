@@ -139,3 +139,11 @@ LinuxECAMPresentation.sublime-project
 LinuxECAMPresentation.sublime-workspace
 
 Our_Presentation_Videos/
+
+#LaTeX miscellaneous
+.synctex.gz
+.snm
+.toc
+.nav
+.aux
+.out
