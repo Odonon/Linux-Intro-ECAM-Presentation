@@ -20,6 +20,5 @@ Les quatres fichiers `.sty` permettent la mise en page  du fichier ``.tex``. Dan
 ```
 
 ## To Do
-- Rendre les images cliquables directement sur le pdf
 - Repenser la mise en page du thème pour paraître plus moderne
 - Mettre à jour les logos des logiciels libres
