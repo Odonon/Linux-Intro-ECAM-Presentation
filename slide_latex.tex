@@ -1,6 +1,7 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{tikz}
 
 \hypersetup{
 	colorlinks,
@@ -8,9 +9,17 @@
 	urlcolor=blue,
 }
 
+\tikzset{
+	invisible/.style={opacity=0,text opacity=0},
+	visible on/.style={alt={#1{}{invisible}}},
+	alt/.code args={<#1>#2#3}{%
+		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+	},
+}
+
 \title{Linux, Unix\\ et OpenSource}
-\date{16/12/2022}
-\author[JB Boni]{\href{https://github.com/Odonon}{Jean-Baptiste Boni}\\D'après un travail collaboratif avec\\ \href{https://github.com/NicolasFlandrois}{Nicolas Flandrois}}
+\date{21/12/2023}
+\author[JB Boni Simonnet]{\href{https://github.com/Odonon}{Jean-Baptiste Boni Simonnet}\\D'après un travail collaboratif avec\\ \href{https://github.com/NicolasFlandrois}{Nicolas Flandrois}}
 
 \usetheme[]{ecamrs}
 
@@ -243,7 +252,7 @@
 \subsection{Les distro Linux}
 
 \begin{frame}
-	\frametitle{Les grandes sœurs}
+	\frametitle{Les grandes soeurs}
 	
 	\begin{center}
 		\includegraphics[width=.8\linewidth]{static/img/linux_distros.png}
@@ -254,7 +263,7 @@
 	\frametitle{La famille nombreuse}
 	
 	\begin{center}
-		\href{https://upload.wikimedia.org/wikipedia/commons/b/b5/Linux_Distribution_Timeline_21_10_2021.svg}{\includegraphics[width=3cm,angle=-90]{static/img/linux_timeline.png}}
+		\href{https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg}{\includegraphics[width=3cm,angle=-90]{static/img/linux_timeline.png}}
 	\end{center}
 \end{frame}
 
@@ -333,6 +342,70 @@
 			\href{https://chimeraos.org/}{\includegraphics[width=.5\linewidth]{static/img/chimeraos.png}}
 		\end{column}
 	\end{columns}
+\end{frame}
+
+\section{Obsolescence}
+
+\begin{frame}{Obsolescence programmée ?}
+	\begin{definition}<2->
+		L'ensemble des techniques, y compris logicielles, par lesquelles le responsable de la mise sur le marché d'un produit vise à en réduire \textbf{délibérément} la durée de vie.
+	\end{definition}
+	
+	\onslide<3->{\begin{center}
+			{\color{red}300 000\texteuro\ d'amende
+				
+				2 ans d'emprisonnement
+				
+				5\% du CA annuel}
+	\end{center}}
+\end{frame}
+
+\begin{frame}{Exemples}
+	\begin{columns}
+		\column[]{.5\textwidth}<2->
+		\centering
+		\href{https://www.lesnumeriques.com/imprimante/obsolescence-programmee-imprimantes-epson-ne-convainc-pas-n72957.html}{\includegraphics[width=.5\linewidth]{static/img/epson.png}}
+		\begin{itemize}
+			\item Cartouche DRM
+			\item Compteur d'impression
+			\item[$\Rightarrow$] Obsolescence par défaut fonctionnel et incompatibilité
+		\end{itemize}
+		\column[]{.5\textwidth}<3->
+		\centering
+		\href{https://fr.wikipedia.org/wiki/General_Motors}{\includegraphics[width=.5\linewidth]{static/img/gm_logo.jpg}}
+		\begin{itemize}
+			\item Invention du changement de gamme
+			\item[$\Rightarrow$] Obsolescence d'évolution
+		\end{itemize}
+		\begin{tikzpicture}[overlay,remember picture,visible on=<4->]
+			\path (-3,0)--++(45:8) node[midway,red,rotate=45]{\Huge LEGAL};
+		\end{tikzpicture}
+	\end{columns}
+\end{frame}
+
+\subsection{Questions}
+\begin{frame}{Questions}
+	\begin{block}{Question 1}<2->
+		Un constructeur de téléphone choisit une pièce moins chère pour réduire le prix de son appareil en sachant que cela diminuera ses performances à long terme. Est-ce de l'obsolescence programmée ?
+	\end{block}
+\end{frame}
+
+\begin{frame}{Questions}
+	\begin{block}{Question 2}
+		Un constructeur d'ordinateur portable choisit de faire en sorte que la batterie de ses machines soient collées, rendant le démontage quasi impossible et le changement de machine presque obligatoire. Est-ce de l'obsolescence programmée ?
+	\end{block}
+\end{frame}
+
+\begin{frame}{Questions}
+	\begin{block}{Question 3}
+		Un éditeur de logiciel fait une mise à jour d'un de ses produits gratuits, le rendant se faisant plus lent sur certains appareils et forçant l'utilisateur à prendre un abonnement payant pour un autre produit. Est-ce de l'obsolescence programmée ?
+	\end{block}
+\end{frame}
+
+\begin{frame}{A qui la faute ?}
+	\onslide<2->{Fabricant ?}
+	\onslide<3->{Vendeur ?}
+	\onslide<4->{Consommateur ?}
 \end{frame}
 
 \section{Pour aller plus loin}
