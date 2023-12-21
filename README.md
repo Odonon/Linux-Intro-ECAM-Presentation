@@ -1,6 +1,8 @@
 # Présentation OpenSource et Logiciels Libres
 Présentation académique pour les étudiants de la filière EMI sur le campus de ECAM LaSalle à Lyon. Travail collaboratif avec Nicolas Flandrois, cette version est un fork de [la version html](https://github.com/NicolasFlandrois/Linux-Intro-ECAM-Presentation) de N.Flandrois.
 
+Une courte introduction à la problématique de l'obslescence programmée a aussi été ajoutée et sera modifiée dans le futur.
+
 ## Utilisation
 Le fichier au format pdf est construit via Beamer sans animations javascript et peut donc être utilisé avec n'importe quel lecteur, y compris via le navigateur.
 
@@ -22,3 +24,5 @@ Les quatres fichiers `.sty` permettent la mise en page  du fichier ``.tex``. Dan
 ## To Do
 - Repenser la mise en page du thème pour paraître plus moderne
 - Mettre à jour les logos des logiciels libres
+- Etoffer la partie sur l'obsolescence
+- Ajouter le lien vers le wooclap en début de présentation
